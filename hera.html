@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href="images/hera_파비콘.png">
+<link href="css/hera.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<script src="script/jquery-3.3.1.min.js"></script>
+<script src="script/swiper.min.js"></script>
+<title>HERA</title>
+</head>
+	<div id="header">
+		<div class="inner">
+			<div class="wrap">
+				<h1>
+					<a href="#">
+						<img src="images/hera_logo.png" alt="logo">
+					</a>
+				</h1>
+				<div class="nav">
+					<ul>
+						<li>
+							<a href="#">헤라 스토리</a>
+						</li>
+						<li>
+							<a href="#">메이크업</a>
+						</li>
+						<li>
+							<a href="#">스킨케어</a>
+						</li>
+						<li>
+							<a href="#">프래그런스</a>
+						</li>
+						<li>
+							<a href="#">#HERA</a>
+						</li>
+					</ul>
+				</div>
+				<div class="aside">
+					<a href="#"><img src="images/store.png" alt="상점"></a>
+					<a href="#"><img src="images/search.png" alt="검색"></a>
+					<a href="#"><img src="images/login1.png" alt="로그인"></a>
+				</div>
+
+				<div class="menu_m">
+					<a href="#"><img src="images/search_m.png" alt="돋보기"></a>
+					<span></span><!--모바일 메뉴바-->
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="main">
+		<div id="section1">
+				<!-- Swiper -->
+			<div class="swiper-container">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide slide1">
+						<img src="images/pcslide1.jpg" alt="이미지1번">
+					</li>
+					<li class="swiper-slide slide2">
+						<img src="images/pcslide2.jpg" alt="이미지2번">
+					</li>
+					<li class="swiper-slide slide3">
+						<img src="images/pcslide3.jpg" alt="이미지3번">
+					</li>
+					<li class="swiper-slide slide4">
+						<img src="images/pcslide4.jpg" alt="이미지4번">
+					</li>
+				</ul>
+				<div class="swiper-pagination"></div>
+            	<div class="prev arrow">&lt;</div>
+         	   <div class="next arrow">&gt;</div>
+			</div>
+		</div>
+	</div>
+<body>
+</body>
+	 <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js">
+	</script>
+	
+	<!-- Initialize Swiper -->
+    <script>
+     		var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 9000,	// 자동으로 화면 전환 2초
+                disableOnInteraction: false	// 손님이 넘길 때는 오토플레이 정지
+            },
+            slidesPerView: 1,	// 화면에 보여주는 이미지 개수
+            loop: true,	// 무한 루프 적용
+            pagination: {	// 하단에 점 표시 적용
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {	// 좌우 화살표 적용
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+			effect: 'fade', // slide, fade, cube, coverflow, flip
+			speed: 1000
+        });
+    </script>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>내셔널지오그래픽</title>
+</head>
+	<style>
+		a{text-decoration: none; color: inherit;} /* a태그 밑줄 제거 */
+		li{list-style: none;} /* li태그 점표시 제거 */
+		address, em, i{font-style: normal;}
+		hr{border: none;}
+		table{border-collapse: collapse;}
+		textarea{resize: none;}
+		
+		#plus{max-width: 1200px; margin: 0 auto;}
+		#plus h2{margin-left: 40px;}
+		#plus ul{display: flex; flex-wrap: wrap;}
+		#plus ul li{position: relative; width: 50%; padding: 2px; box-sizing: border-box;}
+		#plus ul li:last-of-type{width: 100%;}
+		#plus ul li a{}
+		#plus ul li a img{display: block; width: 100%; transition: 0.4s;}
+		#plus ul li a img:last-of-type{position: absolute; left: 0; top: 0;}/*호버이미지*/
+		#plus ul li a .text{position: absolute; left: 20px; bottom: 15px;}
+		#plus ul li a .text h3{color: white; font-size: 1.7em; font-weight: normal;}
+		#plus ul li a .text p{color: white;font-size: 0.9em; }
+		
+		#plus ul li:hover a img+img{opacity: 0;}
+		
+		@media all and (max-width:700px){
+			#plus ul li{width: 100%;}
+			#plus{font-size: 12px;}
+			#plus h2 {padding: 5px 0;}
+			#plus ul li a .text{left: 10px; bottom: 10px;}
+		}
+	
+	</style>
+
+<body>
+	<div id="plus">
+		<h2>DISNEY PLUS</h2>
+		
+		<ul>
+			<li>
+				<a href="#">
+					<img src="images/로꼬.jpg" alt="연습">
+					<img src="images/호버.png" alt="#">
+					<div class="text">
+						<h3>롱 로드 홈</h3>
+						<p>이라크 반군의 기습과 구조 활동</p>
+					</div>
+				</a>
+			</li>
+			
+			<li>
+				<a href="#">
+					<img src="images/로꼬.jpg" alt="연습">
+					<img src="images/호버.png" alt="#">
+					<div class="text">
+						<h3>롱 로드 홈</h3>
+						<p>이라크 반군의 기습과 구조 활동</p>
+					</div>
+				</a>
+			</li>
+			
+			<li>
+				<a href="#">
+					<img src="images/로꼬.jpg" alt="연습">
+					<img src="images/호버.png" alt="#">
+					<div class="text">
+						<h3>롱 로드 홈</h3>
+						<p>이라크 반군의 기습과 구조 활동</p>
+					</div>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+</body>
+</html>

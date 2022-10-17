@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>이펙트</title>
+<style type="text/css">
+div{
+    width:300px;
+    height:300px;
+    background:red;
+    display:none;
+}
+</style>
+<script src="script/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<button id="show">표시</button>
+<button id="hide">비표시</button>
+<div id="back_01">some forms of augmented reality can now be used in our daily lives 2.contact lenses that give GPS directions have not been created yet 3.augmented reality might be used as a tool for exposing an individual`s information.some forms of augmented reality can now be used in our daily lives 2.contact lenses that give GPS directions have not been created yet 3.augmented reality might be used as a tool for exposing an individual`s information.</div>
+<!--  -->
+<script>
+$(function(){
+$('#show').on('click',function(e){
+    $('#back_01:not(:animated)').slideDown(3000); // back01영역이 움직이는 상태가 아니면 선택, 슬라이드 다운 적용
+});
+$('#hide').on('click',function(e){
+    $('#back_01:not(:animated)').slideUp(3000);
+});
+});
+</script>
+</body>
+</html>

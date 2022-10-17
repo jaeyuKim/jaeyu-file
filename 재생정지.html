@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dom</title>
+<style>
+*{margin:0; padding:0;}
+ul,li{list-style:none;}
+#box{background:#000;width:768px; padding:10px; margin:30px auto 0;}
+ul{overflow:hidden; margin-bottom:50px;}
+li{float:left; padding:10px; 
+    border:1px solid #fff;margin:0 10px;
+background:#CC9;}
+img{vertical-align:top;}
+p{text-align:center; 
+    margin-bottom:20px;}
+button{padding:10px 0;width:200px;  
+    background:#069; 
+    color:#fff; 
+    font-size:1.3em; 
+    font-weight:900;
+border:0;margin:0 20px;}
+</style>
+<script src="script/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="box">
+<ul>
+<li><img src="images/new_main_crt1.png" alt="이미지01"></li>
+<li><img src="images/new_main_crt2.png" alt="이미지02"></li>
+<li><img src="images/new_main_crt1_ov.png" alt="이미지03"></li>
+<li><img src="images/new_main_crt2_ov.png" alt="이미지04"></li>
+</ul>
+<p>
+<button id="prev">앞으로</button>
+<button id="next">뒤로</button>
+<button id="stop">정지</button>
+</p>
+</div>
+<script>
+$(function(){
+$('#prev').click(function(e){ // 앞으로 버튼을 클릭하면 뭔가를 하겠다
+$('ul>li:eq(3)').prependTo('ul'); // 마지막 이미지를 선택 ul태그
+});
+$('#next').click(function(e){ //1번째 이미지를 선택,ul태그의
+$('ul>li:eq(0)').appendTo('ul');
+});
+});
+	
+var play = setInterval(function(){
+	$('ul>li:eq(0)').appendTo('ul');
+},3000);
+
+var jy = true // 재생 정지 스위치 변수	
+$('#stop').click(function(e){
+	if(jy == true){
+	clearInterval(play);
+	$('#stop').html('재생');
+	jy = false;
+	} else {
+		play = setInterval(function(){
+			$('ul>li:eq(0)').appendTo('ul');
+		},3000);
+	$('#stop').html('정지');
+		jy = true;
+	}
+});
+	
+</script>
+</body>
+
+</html>

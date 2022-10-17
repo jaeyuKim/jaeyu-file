@@ -1,0 +1,6 @@
+UPDATE mysql.user SET Password=PASSWORD('root') WHERE Host='localhost' AND User='root';
+UPDATE mysql.user SET Password=PASSWORD('root') WHERE Host='127.0.0.1' AND User='root';
+UPDATE mysql.user SET Password=PASSWORD('root') WHERE Host='::1' AND User='root';
+UPDATE mysql.user SET Password=PASSWORD('root') WHERE Host='localhost' AND User='';
+UPDATE mysql.user SET Password=PASSWORD('root') WHERE Host='localhost' AND User='pma';
+FLUSH PRIVILEGES;

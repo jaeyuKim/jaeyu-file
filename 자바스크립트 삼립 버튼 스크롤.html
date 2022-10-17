@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>와플대학</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="file:///C|/Users/tjoeun-602/Desktop/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<style>
+		*{margin: 0; padding: 0;}
+        a{text-decoration: none; color: inherit;}
+        li{list-style: none;}
+        i, em{font-style: normal;}
+        
+        #button{position: fixed; right: 50px; top: 50%; transform: translateY(-50%);}
+        #button span{display: block; width: 20px; height: 20px; margin: 5px 0; border-radius: 10px; background: #000; cursor: pointer;}
+        #button span:nth-of-type(1){background: pink;}
+        #header{width: 1200px; height: 100vh; background: red;}
+        #section1{width: 1200px; height: 100vh; background: orange;}
+        #section2{width: 1200px; height: 100vh; background: yellow;}
+        #section3{width: 1200px; height: 100vh; background: green;}
+        #footer{width: 1200px; height: 100vh; background: blue;}
+	</style>
+</head>
+	
+<body>
+    
+    <div id="button"> <!--우측 도트버튼 5개-->
+        <span onClick="cys(0)"></span>
+        <span onClick="cys(1)"></span>
+        <span onClick="cys(2)"></span>
+        <span onClick="cys(3)"></span>
+        <span onClick="cys(4)"></span>
+    </div>
+    
+    <div id="header">
+        
+    </div>
+    
+    <div id="section1">
+        
+    </div>
+    
+    <div id="section2">
+        
+    </div>
+    
+    <div id="section3">
+        
+    </div>
+    
+    <div id="footer">
+        
+    </div>
+    
+    <script>
+        var scroll_top = 0; // 스크롤 위치값
+        var vh_height = 0; // vh 높이값
+        var switch_val = 0; // 광클릭 방지 스위치 변수값
+        
+        function cys(e){
+            if(switch_val == 0){
+                vh_height = $('#header').height();
+                $('html, body').animate({"scrollTop" : vh_height * e}, 1000);
+                switch_val = 1;
+                
+                setTimeout(function(){ // 폭 넓게 사용가능
+                    switch_val = 0;
+                }, 1000);
+            }
+        };
+        
+        $(window).scroll(function(){
+            vh_height = $('#header').height();
+			console.log(vh_height);
+            scroll_top = $(window).scrollTop();
+            /*
+            for(var i = 0; i < 5; i++){
+                if(scroll_top >= vh_height * i){
+                    $('#button span').css('background', '#000');
+                    $('#button span').eq(i).css('background', 'pink');
+                }
+            }
+            */
+            if(scroll_top >= vh_height * 0){
+                $('#button span').css('background', '#000');
+                $('#button span').eq(0).css('background', 'pink');
+            }
+            if(scroll_top >= vh_height * 1){
+                $('#button span').css('background', '#000');
+                $('#button span').eq(1).css('background', 'pink');
+            }
+            if(scroll_top >= vh_height * 2){
+                $('#button span').css('background', '#000');
+                $('#button span').eq(2).css('background', 'pink');
+            }
+            if(scroll_top >= vh_height * 3){
+                $('#button span').css('background', '#000');
+                $('#button span').eq(3).css('background', 'pink');
+            }
+            if(scroll_top >= vh_height * 4){
+                $('#button span').css('background', '#000');
+                $('#button span').eq(4).css('background', 'pink');
+            }
+        });
+        
+    </script>   
+</body>
+    
+</html>
+
+
+
+
+
+
+  

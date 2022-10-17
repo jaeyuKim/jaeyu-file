@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src= "script/jquery-3.3.1.min.js"></script>
+<title>무제 문서</title>
+	<style>
+		body{height: 5000px;}
+		
+		img{position: fixed; left: 50%; top: 50%; margin: -183.5px 0 0 -132px;}
+	</style>
+</head>
+
+<body>
+	<img src="images/new_main_crt1.png" alt="">
+	
+	<script>
+		// 스크롤 이벤트
+		var scrollTop = 0;
+		
+		$(window).scroll(function(){ // 브라우저 스크롤이 움직이면 무언가를 하겠다.
+			scrollTop = $('html,body').scrollTop();
+			
+			for(var i = 0; i <= 20; i++){
+				if(scrollTop > i*50){
+					$('img').css({'transform':'scale(' + (1 - (i * 0.05)) + ')','opacity': 1 - (i * 0.05)});
+				}
+			}
+			/*
+			if(scrollTop > 0){
+				$('img').css({'transform':'scale(1)','opacity':1});
+			} 
+			
+			if(scrollTop > 50){
+				$('img').css({'transform':'scale(0.95)','opacity':0.95});
+			} 
+			
+			if(scrollTop > 100){
+				$('img').css({'transform':'scale(0.9)','opacity':0.9});
+			} 
+			
+			if(scrollTop > 150){
+				$('img').css({'transform':'scale(0.85)','opacity':0.85});
+			}
+			
+			if(scrollTop > 200){
+				$('img').css({'transform':'scale(0.8)','opacity':0.8});
+			} 
+			
+			
+		});
+		
+		*/
+	</script>
+</body>
+</html>

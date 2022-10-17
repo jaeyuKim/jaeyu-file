@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dom</title>
+<style>
+    section{width:500px; margin:25px auto; text-align:center;}
+    div{display:none;}
+</style>
+<script src="file:///C|/Users/tjoeun-602/Desktop/김재유2/김재유/자바스크립트 제이쿼리 예제/jquery/all/02/js/jquery.min.js"></script>
+</head>
+<body>
+    
+    <section>
+		
+		<ul>
+			<li onMouseOver="jy(1)" onMouseOut="jy2(1)"><img src="images/new_main_crt1.png" alt=""></li>
+			<li onMouseOver="jy(2)" onMouseOut="jy2(2)"><img src="images/new_main_crt2.png" alt=""></li>
+		</ul>
+        </section>
+        <script>
+			
+			function jy(e){
+				$('ul li').eq(e - 1).find('img').attr('src','images/new_main_crt ' + e + '_ov.png');
+			}
+			
+			function jy2(e){
+				$('ul li').eq(e - 1).find('img').attr('src','images/new_main_crt ' + e + '.png');
+			}
+													  
+		
+			
+			/*
+			
+        $(function(){
+            $('#btn01').click(function(e){
+                var num01 = $('div>img').attr('src');
+                //console.log(num01);
+                $('.box01>img').attr('src',num01);
+            });
+            $('#btn02').click(function(e){
+                var num02 = "http://www.daum.net";
+                $('.box02>a').attr('href',num02).text('다음사이트');
+            });
+        });
+			
+			$('.box01 img').mouseover(function(){
+				$(this).attr('src','images/img02.png');
+			});
+			
+			$('.box01 img').mouseleave(function(){
+				$(this).attr('src','images/img01.png');
+			});
+			
+			
+			*/
+        </script>
+</body>
+
+</html>

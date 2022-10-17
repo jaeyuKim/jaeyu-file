@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>논픽션</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+	<style>
+		a{text-decoration: none; color: inherit;} /* a태그 밑줄 제거 */
+		li{list-style: none;} /* li태그 점표시 제거 */
+		address, em, i{font-style: normal;}
+		hr{border: none;}
+		table{border-collapse: collapse;}
+		textarea{resize: none;}
+		
+		#none{max-width: 1600px; margin: 0 auto;}
+		#none .none_wrap{display: flex; justify-content: space-between;}
+		#none .none_wrap div{width: 50%;}
+		.none_wrap .left{}
+		.none_wrap .left ul{}
+		.none_wrap .left ul li{}
+		.none_wrap .left ul li a{position: relative; left: 25%; top: 25%;}
+		.none_wrap .left ul li a img{width: 50%;}
+		.none_wrap .left ul li a h3{width: 100%; position: absolute; bottom: 30px; text-align: center; font-size: 1.2em; color: #fff;}
+		
+		.none_wrap .right{}
+		.none_wrap .right ul{}
+		.none_wrap .right ul li{}
+		.none_wrap .right ul li a{position: relative; left: 0; top: 0;}
+		.none_wrap .right ul li a img{width: 100%;}
+		.none_wrap .right ul li a h3{width: 100%; position: absolute; bottom: 30px; text-align: center; color: #fff; font-size: 1.2em;}
+		
+		@media all and (max-width:780px){
+		#none .none_wrap{display: block; flex-wrap: wrap;}
+        #none .none_wrap div{width: 100%;}
+        #none .none_wrap .left a{position: relative; left: 0; top: 0; p}
+        #none .none_wrap .left a img{width: 100%;}
+        #none .none_wrap .left a h3{bottom: -50px; font-size: 1.0em; color: #000;}
+        #none .none_wrap .right{padding-top: 100px;}
+        #none .none_wrap .right a h3{bottom: -50px; font-size: 1.0em; color: #000;}
+        }
+		
+	</style>
+
+<body>
+	<div id="none">
+		<div class="none_wrap">
+			<div class="left">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="images/바디로션.jpg" alt="#">
+							<h3>Body Wash</h3>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="right">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="images/타월.jpg" alt="#">
+							<h3>Seasonal Gift</h3>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+			
+	</div>
+	
+</body>
+</html>

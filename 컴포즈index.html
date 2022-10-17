@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>컴포즈연습</title>
+	<link rel="shortcut icon" href="images/J.png">
+	<style>
+		*{margin: 0; padding: 0;}  /* 전체선택자. html 모든 태그 여백 제거 */
+		li{list-style: none;} /* 리스트 점표시 제거 */
+		a{text-decoration: none; color: inherit;}  /* a태그 밑줄 제거; 부모 요소의 글자 색상 상속 */
+		address, em, i{font-style: normal;}
+		hr{border: none;}
+		table{border-collapse: collapse;} /* 테이블 표 사이 여백 없애줌 */
+		textarea{resize: none;}
+		.clear::after{content: ""; display: block; clear: both;}
+		
+		#composecoffee{max-width: 1300px; padding: 0 10px; margin: 0 auto; text-align: center;}
+		#composecoffee h1{padding-top: 20px; font-size: 2em;}
+		#composecoffee hr{width: 50px; margin: 20px auto; border-top: 1px solid #000000;}
+		#composecoffee p{}
+		#composecoffee a{display: block; width: 188px; height: 44px; margin: 20px auto; line-height: 44px; border-radius: 5px; background: #000000; color: white;}
+		
+		#composecoffee ul{display: flex; justify-content: space-between; margin: 50px 10px;}
+		#composecoffee ul li{position: relative; margin: 0 5px;}
+		#composecoffee ul li img{display: block; width: 100%;}
+		#composecoffee ul li h5{position: absolute; display: block; width: 100%; left: 0; bottom: 0; padding: 7px 0; color: white; background: rgba(0,0,0,0.7);}
+		
+		#composecoffee a:hover{background: gold; color: black; transition: 0.4s;}
+		
+		@media all and (max-width:660px){
+			#composecoffee{font-size: 12px;}
+			#composecoffee ul{display: flex; flex-wrap: wrap;}
+			#composecoffee ul li{width: 50%; margin: 10px -10px;}
+		}
+		
+	</style>
+</head>
+	<div id="composecoffee">
+		<h1>컴포즈커피 가맹점</h1>
+		<hr>
+		<p>늘 가까이 함께하겠습니다.</p>
+		<a href="#">가까운 매장 찾기</a>
+		
+		<ul>
+			<li>
+				<img src="images/컴포트가맹점.jpg" alt="#">
+				<h5>서귀포신시가지점</h5>
+			</li>
+			<li>
+				<img src="images/컴포즈가맹점(2).jpg" alt="#">
+				<h5>하남감일지구점</h5>
+			</li>
+			<li>
+				<img src="images/컴포즈가맹점(3).jpg" alt="#">
+				<h5>원주중앙점</h5>
+			</li>
+			<li>
+				<img src="images/컴포즈가맹점(4).jpg" alt="#">
+				<h5>안산일동점</h5>
+			</li>
+		</ul>
+	</div>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+ *{margin: 0; padding: 0; font-size: 20px; color: white;}/*html모든태그 여백제거, 이걸써야지ㅣ만 ul li여백 사라*/
+a{text-decoration: none; color: #000;}/*a태그 밑줄제*, 부모요소의 글자색상을 상속받음*/
+li{list-style: none;}/*태그점표시 제거*/
+/*img{vertical-align: middle}*/
+address, em, i{font-style: normal;}/*기울임제거 */
+hr{border: none;}/*히끄무리한 선이들어감*/
+/*.clear::after*/
+table{border-collapse: collapse}
+taxtarea {resize: none;}
+

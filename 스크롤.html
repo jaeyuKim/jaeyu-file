@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src= "script/jquery-3.3.1.min.js"></script>
+<title>무제 문서</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		body{height: 5000px; top: 1000px;}
+		
+		
+		#wrap{position: relative; top: 1000px; }
+		#wrap .left{position: absolute; left: 0; top: 0; width: 50%; height: 500px; background: url("images/타월.jpg") center center;}
+		#wrap .left p:first-of-type{color: white;}
+		
+		
+		#wrap .right{position: absolute; right: 0; top: 0; width: 50%; height: 2000px; background: #44AA92;}
+		
+		
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+	<div class="left">
+		<p>이미지 영역1</p>
+		<p>이미지 영역2</p>
+		<p>이미지 영역3</p>
+	</div>
+	
+	<div class="right">
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	<script>
+	//스크롤 이벤트
+	var scrollTop = 0;
+		
+		$(window).scroll(function(){ // 브라우저 스크롤이 움직이면 뭔가를 하겠다
+			scrollTop = $('html, body').scrollTop();
+			console.log(scrollTop);
+			
+			
+			
+			
+			
+			
+			
+			if(scrollTop >= 2500){ // 스크롤값이 2500이상이면 실행문 적용하고 if문 탈출
+				$('#wrap .left').css({'position':'absolute','top':'1500px'});
+			} else if(scrollTop >= 2000) { 
+				$('#wrap .left p').eq(2).css('color','#fff').siblings().css('color','#000'); // sibling 형제 선택자 ,p태그 3번째를 제외하고 꺼멓게 하겠다.
+			}	
+			
+			else if(scrollTop >= 1500) { 
+				$('#wrap .left p').eq(1).css('color','#fff').siblings().css('color','#000'); // sibling 형제 선택자 ,p태그 2번째를 제외하고 꺼멓게 하겠다.
+			}	
+			
+			 else if(scrollTop >= 500) {
+				$('#wrap .left p').eq(0).css('color','#fff').siblings().css('color','#000');
+			}
+			
+			 else if(scrollTop >= 1000) {
+				$('#wrap .left').css('position','fixed');
+			}
+			
+			if(scrollTop < 1000){ // 스크롤값이 1000미만이면 실행문 적용하고 if문 탈출
+				$('#wrap .left').css({'position':'absolute','top':'0px'});
+			} else if(scrollTop < 2500) { // 스크롤값이 1000미만이 안 되고, 2500미만이면 실행문 적용
+				$('#wrap .left').css({'position':'fixed','top':'0px'});
+			}
+		});
+		
+
+	
+</script>
+</body>
+</html>
